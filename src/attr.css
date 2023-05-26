@@ -12,6 +12,10 @@
 }
 [flex][horizontal] {
   flex-flow: wrap;
+  height: fit-content;
+}
+[flex][horizontal]:not([align-items]) {
+  align-items: end;
 }
 
 [align-items="baseline"] {
