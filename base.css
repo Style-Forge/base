@@ -1,4 +1,4 @@
-/*! style-forge.base v1.1.4 | MIT License | github.com/Sarmaged/style-forge.base */
+/*! style-forge.base v1.1.7 | MIT License | github.com/Sarmaged/style-forge.base */
 
 :root {
   --sf-base-fz: 1rem;
@@ -146,8 +146,9 @@ pre {
 ol,
 ul {
   gap: 0;
-  -webkit-margin-start: 2em;
-          margin-inline-start: 2em;
+  margin-block: 0;
+  margin-inline: 2em 0;
+  padding: 0;
 }
 
 li {
@@ -164,7 +165,7 @@ dd {
 }
 
 blockquote {
-  margin-block: 0.5em;
+  margin-block: 0;
   margin-inline: 2em;
 }
 
@@ -405,7 +406,6 @@ a:active {
 
 a:not([href]) {
   cursor: pointer;
-  text-decoration: underline;
 }
 
 button,
