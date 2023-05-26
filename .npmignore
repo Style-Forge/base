@@ -1,4 +1,5 @@
 test
+.vscode
 .idea
 *.iml
 *.lock
