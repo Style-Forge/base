@@ -15,7 +15,7 @@
   "scripts": {
     "build": "node builder.js",
     "git": "git add . && git commit -m \"build\"",
-    "gitpush": "git push --tags",
+    "gitpush": "git push -u origin main --tags",
     "prepublishOnly": "yarn build && yarn git",
     "postpublish": "yarn gitpush"
   },
