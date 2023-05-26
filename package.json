@@ -14,8 +14,10 @@
   ],
   "scripts": {
     "build": "node builder.js",
-    "git": "git add . && git commit -m \"build\"",
-    "prepublishOnly": "yarn build && yarn git"
+    "git": "git add . && git commit -m",
+    "gitpush": "git push -u origin main --tags",
+    "prepublishOnly": "yarn build && yarn git",
+    "postpublish": "yarn gitpush"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
