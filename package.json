@@ -1,6 +1,6 @@
 {
   "name": "style-forge.base",
-  "version": "1.1.10",
+  "version": "1.1.11",
   "description": "Base CSS for style-forge",
   "main": "base.css",
   "repository": "git@github.com:Sarmaged/style-forge.base.git",
