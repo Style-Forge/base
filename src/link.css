@@ -14,5 +14,4 @@ a:active {
 
 a:not([href]) {
   cursor: pointer;
-  text-decoration: underline;
 }
