@@ -1,0 +1,24 @@
+{
+  "name": "style-forge.base",
+  "version": "1.0.3",
+  "description": "Base CSS for style-forge",
+  "main": "base.css",
+  "repository": "git@github.com:Sarmaged/style-forge.base.git",
+  "author": "Sarmaged <sarmaged@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "style-forge.base",
+    "html",
+    "grid",
+    "css"
+  ],
+  "scripts": {
+    "build": "node builder.js",
+    "prepublishOnly": "yarn build"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.23",
+    "postcss-import": "^15.1.0"
+  }
+}

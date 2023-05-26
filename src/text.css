@@ -1,0 +1,117 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: normal;
+}
+
+address,
+blockquote,
+dt,
+dd,
+li,
+p,
+pre {
+  font-size: inherit;
+  line-height: 1.5;
+}
+
+small,
+sub,
+sup {
+  font-size: var(--sf-txt-small);
+}
+
+sub {
+  margin-block-end: -0.5ex;
+}
+sup {
+  margin-block-start: -0.5ex;
+  align-self: start;
+}
+
+h1 {
+  font-size: var(--sf-h1);
+  margin-block: 0.8em 0.4em;
+}
+h2 {
+  font-size: var(--sf-h2);
+  margin-block: 0.9em 0.45em;
+}
+h3 {
+  font-size: var(--sf-h3);
+  margin-block: 1em 0.5em;
+}
+h4 {
+  font-size: var(--sf-h4);
+  margin-block: 1.1em 0.55em;
+}
+h5 {
+  font-size: var(--sf-h5);
+  margin-block: 1.2em 0.6em;
+}
+h6 {
+  font-size: var(--sf-h6);
+  margin-block: 1.3em 0.65em;
+}
+
+p {
+  font-size: inherit;
+  margin: 0;
+}
+
+code,
+kbd,
+samp,
+time {
+  font-family: monospace, monospace;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+cite,
+dfn,
+em,
+i,
+var {
+  font-style: italic;
+}
+
+ins,
+u {
+  text-decoration: underline;
+}
+
+del,
+s {
+  text-decoration: line-through;
+}
+
+abbr[title] {
+  text-decoration: underline dotted;
+}
+bdo {
+  unicode-bidi: bidi-override;
+}
+bdi {
+  unicode-bidi: isolate;
+}
+mark {
+  color: var(--sf-c-mark-txt);
+  background: var(--sf-c-mark-bg);
+}
+q {
+  display: inline;
+}
+q::before {
+  content: open-quote;
+}
+q::after {
+  content: close-quote;
+}

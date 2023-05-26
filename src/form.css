@@ -1,0 +1,64 @@
+button,
+input,
+select,
+optgroup,
+option,
+textarea
+{
+  font-size: inherit;
+  font-family: inherit;
+  line-height: 1;
+
+  padding-block: 0.25em;
+  padding-inline: 0.5em;
+}
+
+button,
+select,
+input[type="color"],
+input[type="radio"],
+input[type="checkbox"],
+input[type="image"],
+input[type="reset"],
+input[type="button"],
+input[type="submit"],
+input[type="file"],
+input[type="range"]
+{
+  cursor: pointer;
+}
+
+input:disabled,
+button:disabled,
+select:disabled,
+optgroup:disabled,
+option:disabled,
+textarea:read-only,
+textarea:disabled,
+input:read-only:not([type="submit"], [type="reset"], [type="button"], [type="file"], [type="range"], [type="color"], [type="image"], [type="checkbox"], [type="radio"]) {
+  cursor: not-allowed;
+}
+
+select,
+optgroup,
+option
+{
+  gap: 0;
+}
+
+select[multiple] {
+  padding: 0;
+}
+
+fieldset {
+  padding: 1em;
+  border: 1px solid var(--sf-c-bd);
+}
+
+legend {
+  padding: 0 0.5em;
+}
+
+select[multiple] optgroup {
+  padding-block: 1em 0;
+}

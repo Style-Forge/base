@@ -1,0 +1,7 @@
+test
+.idea
+*.iml
+*.lock
+.browserslistrc
+.editorconfig
+.gitignore

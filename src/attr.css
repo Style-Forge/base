@@ -1,0 +1,50 @@
+[resset-gap] {
+  gap: 0;
+}
+
+[horizontal] {
+  grid-auto-flow: column;
+}
+
+[flex] {
+  display: flex;
+  flex-flow: column;
+}
+[flex][horizontal] {
+  flex-flow: wrap;
+}
+
+[align-items="baseline"] {
+  align-items: baseline;
+}
+[align-items="end"] {
+  align-items: end;
+}
+[align-items="start"] {
+  align-items: start;
+}
+[align-items="center"] {
+  align-items: center;
+}
+[align-items="stretch"] {
+  align-items: stretch;
+}
+
+[justify-content="end"] {
+  justify-content: end;
+}
+[justify-content="start"] {
+  justify-content: start;
+}
+[justify-content="center"] {
+  justify-content: center;
+}
+[justify-content="space-around"] {
+  justify-content: space-around;
+}
+[justify-content="space-between"] {
+  justify-content: space-between;
+}
+[justify-content="space-evenly"] {
+  justify-content: space-evenly;
+}

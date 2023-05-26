@@ -1,0 +1,18 @@
+a {
+  color: var(--sf-c-link);
+  text-decoration: underline;
+}
+
+a:active {
+  color: var(--sf-c-link-active);
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+a:not([href]) {
+  cursor: pointer;
+  text-decoration: underline;
+}
