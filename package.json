@@ -14,8 +14,7 @@
   ],
   "scripts": {
     "build": "node builder.js",
-    "prepublishOnly": "node builder.js",
-    "postpublish": "git add . && git commit -m \"build\" && git push --tags"
+    "prepublishOnly": "node builder.js"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
