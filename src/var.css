@@ -1,6 +1,9 @@
 :root {
+  --sf-base-ff: Arial, Helvetica, sans-serif;
   --sf-base-fz: 1rem;
   --sf-base-fw: 400;
+
+  --sf-gap: 0.5em;
 
   --sf-h1: 3rem;
   --sf-h2: 2.5rem;
@@ -31,13 +34,8 @@
     --sf-c-txt: hsl(0, 0%, 90%);
     --sf-c-bg: hsl(0, 0%, 10%);
 
-    --sf-c-mark-bg: hsl(60, 100%, 50%);
-    --sf-c-mark-txt: hsl(0, 0%, 10%);
-
     --sf-c-shape-bg: hsl(0, 0%, 20%);
 
     --sf-c-bd: hsl(0, 0%, 50%);
-    --sf-c-link: hsl(225, 73%, 57%);
-    --sf-c-link-active: hsl(288, 59%, 58%);
   }
 }

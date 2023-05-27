@@ -6,13 +6,13 @@
 
 * {
   display: grid;
-  gap: 0.5em;
+  gap: var(--sf-gap);
 }
 
 html {
   color-scheme: light dark;
 
-  font: var(--sf-base-fz)/var(--sf-base-fw) Arial, Helvetica, sans-serif;
+  font: var(--sf-base-fz)/var(--sf-base-fw) var(--sf-base-ff);
   line-height: 0.8;
 
   color: var(--sf-c-txt);
@@ -29,9 +29,13 @@ html {
   text-size-adjust: 100%;
 }
 
+body,
+figure {
+  margin: 0;
+}
+
 body {
   min-height: 100vh;
-  margin: 0;
 }
 
 a,
@@ -85,6 +89,7 @@ var {
 }
 
 hr {
+  width: 100%;
   margin-block: 1em;
 }
 
