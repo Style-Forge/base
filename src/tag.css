@@ -1,8 +1,7 @@
 *,
 *::before,
-*::after {
-  box-sizing: inherit;
-}
+*::after
+{ box-sizing: inherit }
 
 * {
   display: grid;
@@ -30,13 +29,10 @@ html {
 }
 
 body,
-figure {
-  margin: 0;
-}
+figure
+{ margin: 0 }
 
-body {
-  min-height: 100vh;
-}
+body { min-height: 100vh }
 
 a,
 abbr,
@@ -84,9 +80,8 @@ sup,
 textarea,
 time,
 u,
-var {
-  display: unset;
-}
+var
+{ display: unset }
 
 hr {
   width: 100%;
@@ -100,22 +95,17 @@ pre {
 }
 
 ol,
-ul {
+ul
+{
   gap: 0;
   margin-block: 0;
   margin-inline: 2em 0;
   padding: 0;
 }
-li {
-  display: list-item;
-}
+li { display: list-item }
 
-dt {
-  font-weight: 700;
-}
-dd {
-  margin-inline-start: 2em;
-}
+dt { font-weight: 700 }
+dd { margin-inline-start: 2em }
 
 blockquote {
   margin-block: 0;
@@ -128,15 +118,15 @@ summary {
 }
 
 img,
-video {
+video
+{
   height: auto;
   max-width: 100%;
 }
 
 iframe,
-img {
-  border: 0;
-}
+img
+{ border: 0 }
 
 [hidden],
 head *,
@@ -145,6 +135,5 @@ link,
 meta,
 script,
 style,
-template {
-  display: none;
-}
+template
+{ display: none }

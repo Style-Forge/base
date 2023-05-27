@@ -7,30 +7,21 @@ table {
 thead,
 tbody,
 tfoot
-{
-  background: none;
-}
+{ background: none }
 
-thead {
-  display: table-header-group;
-}
-tbody {
-  display: table-row-group;
-}
-tfoot {
-  display: table-footer-group;
-}
-tr {
-  display: table-row;
-}
+thead { display: table-header-group }
+tbody { display: table-row-group }
+tfoot { display: table-footer-group }
+tr { display: table-row }
+
 td,
-th {
+th
+{
   display: table-cell;
   padding: 0.5em 0.75em;
   vertical-align: top;
   border: 1px solid var(--sf-c-bd);
 }
 td:not([align]),
-th:not([align]) {
-  text-align: inherit;
-}
+th:not([align])
+{ text-align: inherit }

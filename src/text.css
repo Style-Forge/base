@@ -3,7 +3,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6
+{
   font-weight: 700;
   line-height: normal;
 }
@@ -14,20 +15,18 @@ dt,
 dd,
 li,
 p,
-pre {
+pre
+{
   font-size: inherit;
   line-height: 1.5;
 }
 
 small,
 sub,
-sup {
-  font-size: var(--sf-txt-small);
-}
+sup
+{ font-size: var(--sf-txt-small) }
 
-sub {
-  margin-block-end: -0.5ex;
-}
+sub { margin-block-end: -0.5ex }
 sup {
   margin-block-start: -0.5ex;
   align-self: start;
@@ -66,52 +65,35 @@ p {
 code,
 kbd,
 samp,
-time {
-  font-family: monospace, monospace;
-}
+time
+{ font-family: monospace, monospace }
 
 b,
-strong {
-  font-weight: 700;
-}
+strong
+{ font-weight: 700 }
 
 cite,
 dfn,
 em,
 i,
-var {
-  font-style: italic;
-}
+var
+{ font-style: italic }
 
 ins,
-u {
-  text-decoration: underline;
-}
+u
+{ text-decoration: underline }
 
 del,
-s {
-  text-decoration: line-through;
-}
+s
+{ text-decoration: line-through }
 
-abbr[title] {
-  text-decoration: underline dotted;
-}
-bdo {
-  unicode-bidi: bidi-override;
-}
-bdi {
-  unicode-bidi: isolate;
-}
 mark {
   color: var(--sf-c-mark-txt);
   background: var(--sf-c-mark-bg);
 }
-q {
-  display: inline;
-}
-q::before {
-  content: open-quote;
-}
-q::after {
-  content: close-quote;
-}
+abbr[title] { text-decoration: underline dotted }
+bdo { unicode-bidi: bidi-override }
+bdi { unicode-bidi: isolate }
+q { display: inline }
+q::before { content: open-quote }
+q::after { content: close-quote }
