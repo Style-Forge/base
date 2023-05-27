@@ -1,8 +1,11 @@
-/*! style-forge.base v1.1.16 | MIT License | github.com/Sarmaged/style-forge.base */
+/*! style-forge.base v1.1.19 | MIT License | github.com/Sarmaged/style-forge.base */
 
 :root {
+  --sf-base-ff: Arial, Helvetica, sans-serif;
   --sf-base-fz: 1rem;
   --sf-base-fw: 400;
+
+  --sf-gap: 0.5em;
 
   --sf-h1: 3rem;
   --sf-h2: 2.5rem;
@@ -33,14 +36,9 @@
     --sf-c-txt: hsl(0, 0%, 90%);
     --sf-c-bg: hsl(0, 0%, 10%);
 
-    --sf-c-mark-bg: hsl(60, 100%, 50%);
-    --sf-c-mark-txt: hsl(0, 0%, 10%);
-
     --sf-c-shape-bg: hsl(0, 0%, 20%);
 
     --sf-c-bd: hsl(0, 0%, 50%);
-    --sf-c-link: hsl(225, 73%, 57%);
-    --sf-c-link-active: hsl(288, 59%, 58%);
   }
 }
 
@@ -52,13 +50,13 @@
 
 * {
   display: grid;
-  gap: 0.5em;
+  gap: var(--sf-gap);
 }
 
 html {
   color-scheme: light dark;
 
-  font: var(--sf-base-fz)/var(--sf-base-fw) Arial, Helvetica, sans-serif;
+  font: var(--sf-base-fz)/var(--sf-base-fw) var(--sf-base-ff);
   line-height: 0.8;
 
   color: var(--sf-c-txt);
@@ -77,9 +75,13 @@ html {
           text-size-adjust: 100%;
 }
 
+body,
+figure {
+  margin: 0;
+}
+
 body {
   min-height: 100vh;
-  margin: 0;
 }
 
 a,
@@ -133,6 +135,7 @@ var {
 }
 
 hr {
+  width: 100%;
   margin-block: 1em;
 }
 
