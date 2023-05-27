@@ -1,10 +1,11 @@
-[resset-gap] {
-  gap: 0;
-}
+[resset-gap] { gap: 0 }
+[horizontal] { grid-auto-flow: column }
 
-[horizontal] {
-  grid-auto-flow: column;
-}
+[shift] { margin: auto }
+[shift][up] { margin-top: 0 }
+[shift][left] { margin-left: 0 }
+[shift][right] { margin-right: 0 }
+[shift][down] { margin-bottom: 0 }
 
 [flex] {
   display: flex;
@@ -14,41 +15,17 @@
   flex-flow: wrap;
   height: fit-content;
 }
-[flex][horizontal]:not([align-items]) {
-  align-items: end;
-}
+[flex][horizontal]:not([align-items]) { align-items: end }
 
-[align-items="baseline"] {
-  align-items: baseline;
-}
-[align-items="end"] {
-  align-items: end;
-}
-[align-items="start"] {
-  align-items: start;
-}
-[align-items="center"] {
-  align-items: center;
-}
-[align-items="stretch"] {
-  align-items: stretch;
-}
+[align-items="baseline"] { align-items: baseline }
+[align-items="end"] { align-items: end }
+[align-items="start"] { align-items: start }
+[align-items="center"] { align-items: center }
+[align-items="stretch"] { align-items: stretch }
 
-[justify-content="end"] {
-  justify-content: end;
-}
-[justify-content="start"] {
-  justify-content: start;
-}
-[justify-content="center"] {
-  justify-content: center;
-}
-[justify-content="space-around"] {
-  justify-content: space-around;
-}
-[justify-content="space-between"] {
-  justify-content: space-between;
-}
-[justify-content="space-evenly"] {
-  justify-content: space-evenly;
-}
+[justify-content="end"] { justify-content: end }
+[justify-content="start"] { justify-content: start }
+[justify-content="center"] { justify-content: center }
+[justify-content="space-around"] { justify-content: space-around }
+[justify-content="space-between"] { justify-content: space-between }
+[justify-content="space-evenly"] { justify-content: space-evenly }
