@@ -88,8 +88,8 @@ s
 { text-decoration: line-through }
 
 mark {
-  color: var(--sf-c-mark-txt);
-  background: var(--sf-c-mark-bg);
+  color: hsl(var(--sf-c-mark-txt));
+  background: hsl(var(--sf-c-mark-bg));
 }
 abbr[title] { text-decoration: underline dotted }
 bdo { unicode-bidi: bidi-override }

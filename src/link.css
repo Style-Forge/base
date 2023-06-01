@@ -1,9 +1,9 @@
 a {
-  color: var(--sf-c-link);
+  color: hsl(var(--sf-c-link));
   text-decoration: underline;
 }
 
-a:active { color: var(--sf-c-link-active) }
+a:active { color: hsl(var(--sf-c-link-active)) }
 
 a:hover,
 a:active

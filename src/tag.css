@@ -14,8 +14,8 @@ html {
   font: var(--sf-base-fz)/var(--sf-base-fw) var(--sf-base-ff);
   line-height: 0.8;
 
-  color: var(--sf-c-txt);
-  background: var(--sf-c-bg);
+  color: hsl(var(--sf-c-txt));
+  background: hsl(var(--sf-c-bg));
 
   min-width: 300px;
 
@@ -91,7 +91,7 @@ hr {
 pre {
   overflow: auto;
   padding: 1.25em 1.5em;
-  background: var(--sf-c-shape-bg);
+  background: hsl(var(--sf-c-shape-bg));
 }
 
 ol,
@@ -129,6 +129,8 @@ img
 { border: 0 }
 
 [hidden],
+[type="hidden"],
+datalist,
 head *,
 head,
 link,

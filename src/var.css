@@ -16,26 +16,21 @@
   --sf-txt: 1rem;
   --sf-txt-small: 0.75rem;
 
-  --sf-c-txt: hsl(0, 0%, 10%);
-  --sf-c-bg: hsl(0, 0%, 100%);
-
-  --sf-c-mark-bg: hsl(60, 100%, 50%);
-  --sf-c-mark-txt: hsl(0, 0%, 10%);
-
-  --sf-c-shape-bg: hsl(0, 0%, 90%);
-
-  --sf-c-bd: hsl(0, 0%, 75%);
-  --sf-c-link: hsl(225, 73%, 57%);
-  --sf-c-link-active: hsl(288, 59%, 58%);
+  --sf-c-txt: 0, 0%, 10%;
+  --sf-c-bg: 0, 0%, 100%;
+  --sf-c-mark-bg: 60, 100%, 50%;
+  --sf-c-mark-txt: 0, 0%, 10%;
+  --sf-c-shape-bg: 0, 0%, 90%;
+  --sf-c-bd: 0, 0%, 75%;
+  --sf-c-link: 225, 73%, 57%;
+  --sf-c-link-active: 288, 59%, 58%;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --sf-c-txt: hsl(0, 0%, 90%);
-    --sf-c-bg: hsl(0, 0%, 10%);
-
-    --sf-c-shape-bg: hsl(0, 0%, 20%);
-
-    --sf-c-bd: hsl(0, 0%, 50%);
+    --sf-c-txt: 0, 0%, 90%;
+    --sf-c-bg: 0, 0%, 10%;
+    --sf-c-shape-bg: 0, 0%, 20%;
+    --sf-c-bd: 0, 0%, 50%;
   }
 }

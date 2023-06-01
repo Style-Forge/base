@@ -20,7 +20,7 @@ th
   display: table-cell;
   padding: 0.5em 0.75em;
   vertical-align: top;
-  border: 1px solid var(--sf-c-bd);
+  border: 1px solid hsl(var(--sf-c-bd));
 }
 td:not([align]),
 th:not([align])
