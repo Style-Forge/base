@@ -9,8 +9,6 @@
 }
 
 html {
-  color-scheme: light dark;
-
   font: var(--sf-base-fz)/var(--sf-base-fw) var(--sf-base-ff);
   line-height: 0.8;
 
