@@ -1,5 +1,13 @@
-[resset-gap] { gap: 0 }
+[fit] { overflow: auto }
+[reset-gap] { gap: 0 }
+
 [horizontal] { grid-auto-flow: column }
+
+[horizontal-auto] { grid-auto-columns: auto }
+[horizontal-fr] { grid-auto-columns: 1fr }
+
+[vertical-auto] { grid-auto-rows: auto }
+[vertical-fr] { grid-auto-rows: 1fr }
 
 [shift] { margin: auto }
 [shift][up] { margin-top: 0 }

@@ -1,6 +1,4 @@
 :root {
-  color-scheme: light dark;
-
   --sf-base-ff: Arial, Helvetica, sans-serif;
   --sf-base-fw: 400;
   --sf-base-fz: 1rem;
@@ -28,6 +26,10 @@
   --sf-c-txt: 0, 0%, 10%;
 }
 
+:root[data-theme] {
+  color-scheme: light dark;
+}
+
 :root[data-theme="dark"] {
   --sf-c-bd: 0, 0%, 50%;
   --sf-c-bg: 0, 0%, 10%;
@@ -36,19 +38,11 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root[data-theme],
+  :root[data-theme="dark"] {
     --sf-c-bd: 0, 0%, 50%;
     --sf-c-bg: 0, 0%, 10%;
     --sf-c-shape-bg: 0, 0%, 20%;
     --sf-c-txt: 0, 0%, 90%;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  :root[data-theme] {
-    --sf-c-bd: 0, 0%, 75%;
-    --sf-c-bg: 0, 0%, 100%;
-    --sf-c-shape-bg: 0, 0%, 90%;
-    --sf-c-txt: 0, 0%, 10%;
   }
 }

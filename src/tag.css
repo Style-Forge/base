@@ -30,7 +30,9 @@ body,
 figure
 { margin: 0 }
 
-body { min-height: 100vh }
+body {
+  grid-template-rows: 100vh;
+}
 
 a,
 abbr,
@@ -135,5 +137,6 @@ link,
 meta,
 script,
 style,
-template
+template,
+dialog:not([open])
 { display: none }
