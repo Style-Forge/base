@@ -15,34 +15,51 @@
   --sf-txt-small: 0.75rem;
   --sf-txt: inherit;
 
-  --sf-c-link-active: 288, 59%, 58%;
-  --sf-c-link: 225, 73%, 57%;
-  --sf-c-mark-bg: 60, 100%, 50%;
-  --sf-c-mark-txt: 0, 0%, 10%;
+  --sf-c-link-active: 288 59% 58%;
+  --sf-c-link: 225 73% 57%;
+  --sf-c-mark-bg: 60 100% 50%;
+  --sf-c-mark-txt: 0 0% 10%;
 
-  --sf-c-bd: 0, 0%, 75%;
-  --sf-c-bg: 0, 0%, 100%;
-  --sf-c-shape-bg: 0, 0%, 90%;
-  --sf-c-txt: 0, 0%, 10%;
+  --sf-c-bd: 0 0% 75%;
+  --sf-c-bg: 0 0% 100%;
+  --sf-c-shape-bg: 0 0% 90%;
+  --sf-c-txt: 0 0% 10%;
 }
 
-:root[data-theme] {
+::backdrop {
+  --color-backdrop: 0 0% 10%;
+}
+
+:root[data-theme="auto"] {
   color-scheme: light dark;
 }
 
 :root[data-theme="dark"] {
-  --sf-c-bd: 0, 0%, 50%;
-  --sf-c-bg: 0, 0%, 10%;
-  --sf-c-shape-bg: 0, 0%, 20%;
-  --sf-c-txt: 0, 0%, 90%;
+  color-scheme: dark;
+
+  --sf-c-bd: 0 0% 50%;
+  --sf-c-bg: 0 0% 10%;
+  --sf-c-shape-bg: 0 0% 20%;
+  --sf-c-txt: 0 0% 90%;
+}
+
+:root[data-theme="dark"] ::backdrop {
+  --color-backdrop: 0 0% 100%;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root[data-theme],
+  :root[data-theme="auto"],
   :root[data-theme="dark"] {
-    --sf-c-bd: 0, 0%, 50%;
-    --sf-c-bg: 0, 0%, 10%;
-    --sf-c-shape-bg: 0, 0%, 20%;
-    --sf-c-txt: 0, 0%, 90%;
+    color-scheme: dark;
+
+    --sf-c-bd: 0 0% 50%;
+    --sf-c-bg: 0 0% 10%;
+    --sf-c-shape-bg: 0 0% 20%;
+    --sf-c-txt: 0 0% 90%;
+  }
+
+  :root[data-theme="auto"] ::backdrop,
+  :root[data-theme="dark"] ::backdrop {
+    --color-backdrop: 0 0% 100%;
   }
 }
