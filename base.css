@@ -1,9 +1,9 @@
-/*! style-forge.base v1.2.1 | MIT License | github.com/sarmaged/style-forge.base */
+/*! style-forge.base v1.2.2 | MIT License | github.com/sarmaged/style-forge.base */
 
 :root {
   --sf-base-ff: Arial, Helvetica, sans-serif;
-  --sf-base-fz: 1rem;
   --sf-base-fw: 400;
+  --sf-base-fz: 1rem;
 
   --sf-gap: 0.5em;
 
@@ -13,27 +13,56 @@
   --sf-h4: 1.5rem;
   --sf-h5: 1.25rem;
   --sf-h6: 1rem;
-  --sf-h7: 0.75rem;
 
-  --sf-txt: 1rem;
   --sf-txt-small: 0.75rem;
+  --sf-txt: inherit;
 
-  --sf-c-txt: 0, 0%, 10%;
-  --sf-c-bg: 0, 0%, 100%;
-  --sf-c-mark-bg: 60, 100%, 50%;
-  --sf-c-mark-txt: 0, 0%, 10%;
-  --sf-c-shape-bg: 0, 0%, 90%;
-  --sf-c-bd: 0, 0%, 75%;
-  --sf-c-link: 225, 73%, 57%;
-  --sf-c-link-active: 288, 59%, 58%;
+  --sf-c-link-active: 288 59% 58%;
+  --sf-c-link: 225 73% 57%;
+  --sf-c-mark-bg: 60 100% 50%;
+  --sf-c-mark-txt: 0 0% 10%;
+
+  --sf-c-bd: 0 0% 75%;
+  --sf-c-bg: 0 0% 100%;
+  --sf-c-shape-bg: 0 0% 90%;
+  --sf-c-txt: 0 0% 10%;
+}
+
+::backdrop {
+  --color-backdrop: 0 0% 10%;
+}
+
+:root[data-theme="auto"] {
+  color-scheme: light dark;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --sf-c-bd: 0 0% 50%;
+  --sf-c-bg: 0 0% 10%;
+  --sf-c-shape-bg: 0 0% 20%;
+  --sf-c-txt: 0 0% 90%;
+}
+
+:root[data-theme="dark"] ::backdrop {
+  --color-backdrop: 0 0% 100%;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --sf-c-txt: 0, 0%, 90%;
-    --sf-c-bg: 0, 0%, 10%;
-    --sf-c-shape-bg: 0, 0%, 20%;
-    --sf-c-bd: 0, 0%, 50%;
+  :root[data-theme="auto"],
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+
+    --sf-c-bd: 0 0% 50%;
+    --sf-c-bg: 0 0% 10%;
+    --sf-c-shape-bg: 0 0% 20%;
+    --sf-c-txt: 0 0% 90%;
+  }
+
+  :root[data-theme="auto"] ::backdrop,
+  :root[data-theme="dark"] ::backdrop {
+    --color-backdrop: 0 0% 100%;
   }
 }
 
@@ -48,8 +77,6 @@
 }
 
 html {
-  color-scheme: light dark;
-
   font: var(--sf-base-fz)/var(--sf-base-fw) var(--sf-base-ff);
   line-height: 0.8;
 
@@ -73,7 +100,9 @@ body,
 figure
 { margin: 0 }
 
-body { min-height: 100vh }
+body {
+  grid-template-rows: 100vh;
+}
 
 a,
 abbr,
@@ -180,12 +209,23 @@ link,
 meta,
 script,
 style,
-template
+template,
+dialog:not([open])
 { display: none }
 
-[resset-gap] { gap: 0 }
+[fit] { overflow: auto }
+
+[reset-gap] { gap: 0 }
 
 [horizontal] { grid-auto-flow: column }
+
+[horizontal-auto] { grid-auto-columns: auto }
+
+[horizontal-fr] { grid-auto-columns: 1fr }
+
+[vertical-auto] { grid-auto-rows: auto }
+
+[vertical-fr] { grid-auto-rows: 1fr }
 
 [shift] { margin: auto }
 
@@ -417,6 +457,7 @@ textarea
 {
   font-size: inherit;
   font-family: inherit;
+  font-weight: 400;
   line-height: 1;
 
   padding-block: 0.25em;
@@ -453,6 +494,10 @@ select,
 optgroup,
 option
 { gap: 0 }
+
+input[type="file"] {
+  overflow: hidden;
+}
 
 select[multiple] { padding: 0 }
 
@@ -496,3 +541,7 @@ th
 td:not([align]),
 th:not([align])
 { text-align: inherit }
+
+dialog::backdrop {
+  background: hsl(var(--color-backdrop) / 20%);
+}
