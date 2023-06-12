@@ -1,13 +1,37 @@
-[fit] { overflow: auto }
-[reset-gap] { gap: 0 }
+[p-a] { position: absolute }
+[p-f] { position: fixed }
+[p-r] { position: relative }
+[p-static] { position: static }
+[p-sticky] { position: sticky }
+[p-u] { position: unset }
 
-[horizontal] { grid-auto-flow: column }
+[top]:is([p-a], [p-f], [p-r], [p-sticky]) { top: 0 }
+[left]:is([p-a], [p-f], [p-r], [p-sticky]) { left: 0 }
+[right]:is([p-a], [p-f], [p-r], [p-sticky]) { right: 0 }
+[bottom]:is([p-a], [p-f], [p-r], [p-sticky]) { bottom: 0 }
 
-[horizontal-auto] { grid-auto-columns: auto }
-[horizontal-fr] { grid-auto-columns: 1fr }
+[full]:is([p-a],[p-f]) {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 
-[vertical-auto] { grid-auto-rows: auto }
-[vertical-fr] { grid-auto-rows: 1fr }
+[ov-a] { overflow: auto }
+[ov-h] { overflow: hidden }
+
+[wv-100] { width: 100vw }
+[vh-100] { height: 100vh }
+
+[gap-0] { gap: 0 }
+
+[horz] { grid-auto-flow: column }
+[vert] { grid-auto-flow: row }
+
+[grid-auto-cols="auto"] { grid-auto-columns: auto }
+[grid-auto-cols="fr"] { grid-auto-columns: 1fr }
+[grid-auto-rows="auto"] { grid-auto-rows: auto }
+[grid-auto-rows="fr"] { grid-auto-rows: 1fr }
 
 [shift] { margin: auto }
 [shift][up] { margin-top: 0 }
@@ -19,11 +43,11 @@
   display: flex;
   flex-flow: column;
 }
-[flex][horizontal] {
+[flex][horz] {
   flex-flow: wrap;
   height: fit-content;
 }
-[flex][horizontal]:not([align-items]) { align-items: end }
+[flex][horz]:not([align-items]) { align-items: end }
 
 [align-content="baseline"] { align-content: baseline }
 [align-content="center"] { align-content: center }
