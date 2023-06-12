@@ -1,4 +1,4 @@
-/*! style-forge.base v1.2.2 | MIT License | github.com/sarmaged/style-forge.base */
+/*! style-forge.base v2.0.0 | MIT License | github.com/sarmaged/style-forge.base */
 
 :root {
   --sf-base-ff: Arial, Helvetica, sans-serif;
@@ -15,7 +15,6 @@
   --sf-h6: 1rem;
 
   --sf-txt-small: 0.75rem;
-  --sf-txt: inherit;
 
   --sf-c-link-active: 288 59% 58%;
   --sf-c-link: 225 73% 57%;
@@ -72,6 +71,7 @@
 { box-sizing: inherit }
 
 * {
+  position: unset;
   display: grid;
   gap: var(--sf-gap);
 }
@@ -101,7 +101,7 @@ figure
 { margin: 0 }
 
 body {
-  grid-template-rows: 100vh;
+  min-height: 100vh;
 }
 
 a,
@@ -213,19 +213,54 @@ template,
 dialog:not([open])
 { display: none }
 
-[fit] { overflow: auto }
+[p-a] { position: absolute }
 
-[reset-gap] { gap: 0 }
+[p-f] { position: fixed }
 
-[horizontal] { grid-auto-flow: column }
+[p-r] { position: relative }
 
-[horizontal-auto] { grid-auto-columns: auto }
+[p-static] { position: static }
 
-[horizontal-fr] { grid-auto-columns: 1fr }
+[p-sticky] { position: sticky }
 
-[vertical-auto] { grid-auto-rows: auto }
+[p-u] { position: unset }
 
-[vertical-fr] { grid-auto-rows: 1fr }
+[top]:is([p-a], [p-f], [p-r], [p-sticky]) { top: 0 }
+
+[left]:is([p-a], [p-f], [p-r], [p-sticky]) { left: 0 }
+
+[right]:is([p-a], [p-f], [p-r], [p-sticky]) { right: 0 }
+
+[bottom]:is([p-a], [p-f], [p-r], [p-sticky]) { bottom: 0 }
+
+[full]:is([p-a],[p-f]) {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+[ov-a] { overflow: auto }
+
+[ov-h] { overflow: hidden }
+
+[wv-100] { width: 100vw }
+
+[vh-100] { height: 100vh }
+
+[gap-0] { gap: 0 }
+
+[horz] { grid-auto-flow: column }
+
+[vert] { grid-auto-flow: row }
+
+[grid-auto-cols="auto"] { grid-auto-columns: auto }
+
+[grid-auto-cols="fr"] { grid-auto-columns: 1fr }
+
+[grid-auto-rows="auto"] { grid-auto-rows: auto }
+
+[grid-auto-rows="fr"] { grid-auto-rows: 1fr }
 
 [shift] { margin: auto }
 
@@ -242,13 +277,13 @@ dialog:not([open])
   flex-flow: column;
 }
 
-[flex][horizontal] {
+[flex][horz] {
   flex-flow: wrap;
   height: -moz-fit-content;
   height: fit-content;
 }
 
-[flex][horizontal]:not([align-items]) { align-items: end }
+[flex][horz]:not([align-items]) { align-items: end }
 
 [align-content="baseline"] { align-content: baseline }
 
