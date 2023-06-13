@@ -1,3 +1,2 @@
-dialog::backdrop {
-  background: hsl(var(--sf-c-backdrop) / 20%);
-}
+dialog[open] { z-index: 1000 }
+dialog::backdrop { background: hsl(var(--sf-c-backdrop) / 20%) }

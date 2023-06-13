@@ -1,16 +1,18 @@
-[p-a] { position: absolute }
-[p-f] { position: fixed }
-[p-r] { position: relative }
-[p-static] { position: static }
-[p-sticky] { position: sticky }
-[p-u] { position: unset }
+[initial] { display: initial }
+[inherit] { display: inherit }
 
-[top]:is([p-a], [p-f], [p-r], [p-sticky]) { top: 0 }
-[left]:is([p-a], [p-f], [p-r], [p-sticky]) { left: 0 }
-[right]:is([p-a], [p-f], [p-r], [p-sticky]) { right: 0 }
-[bottom]:is([p-a], [p-f], [p-r], [p-sticky]) { bottom: 0 }
+[fixed] { position: fixed }
+[static] { position: static }
+[sticky] { position: sticky }
+[relative] { position: relative }
+[absolute] { position: absolute }
 
-[full]:is([p-a],[p-f]) {
+[top]:is([absolute], [fixed], [relative], [sticky]) { top: 0 }
+[left]:is([absolute], [fixed], [relative], [sticky]) { left: 0 }
+[right]:is([absolute], [fixed], [relative], [sticky]) { right: 0 }
+[bottom]:is([absolute], [fixed], [relative], [sticky]) { bottom: 0 }
+
+[full]:is([absolute],[fixed]) {
   top: 0;
   left: 0;
   right: 0;

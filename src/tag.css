@@ -4,7 +4,6 @@
 { box-sizing: inherit }
 
 * {
-  position: unset;
   display: grid;
   gap: var(--sf-gap);
 }
@@ -31,27 +30,27 @@ body,
 figure
 { margin: 0 }
 
-body {
-  min-height: 100vh;
-}
+html { height: 100% }
+body { min-height: 100% }
 
 a,
 abbr,
 address,
+audio,
 b,
 bdi,
 bdo,
 br,
 button,
+canvas,
 cite,
 code,
+data,
+dd,
 del,
 dfn,
+dt,
 em,
-i,
-img,
-ins,
-input,
 h1,
 h2,
 h3,
@@ -60,12 +59,22 @@ h5,
 h6,
 hr,
 html,
+i,
+iframe,
+img,
+input,
+ins,
 kbd,
 label,
 legend,
 mark,
+meter,
+noscript,
+ol,
 p,
+picture,
 pre,
+progress,
 q,
 rp,
 rt,
@@ -74,15 +83,20 @@ s,
 samp,
 select,
 small,
+source,
 span,
 strong,
 sub,
+summary,
 sup,
+svg,
 textarea,
 time,
 u,
-var
-{ display: unset }
+ul,
+var,
+video
+{ display: initial }
 
 hr {
   width: 100%;
@@ -132,12 +146,11 @@ img
 [hidden],
 [type="hidden"],
 datalist,
-head *,
+dialog:not([open]),
 head,
 link,
 meta,
 script,
 style,
-template,
-dialog:not([open])
+template
 { display: none }

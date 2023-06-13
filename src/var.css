@@ -41,6 +41,10 @@
   --sf-dark-c-backdrop: 0 0% 100%;
 }
 
+:root[data-theme] {
+  transition: background-color 0.2s ease-out;
+}
+
 :root[data-theme="auto"] {
   color-scheme: light dark;
 }

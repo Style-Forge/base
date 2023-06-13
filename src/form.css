@@ -46,13 +46,9 @@ input[type="file"] {
   overflow: hidden;
 }
 
-select[multiple] { padding: 0 }
-
 fieldset {
   padding: 1em;
   border: 1px solid hsl(var(--sf-c-bd));
 }
 
 legend { padding: 0 0.5em }
-
-select[multiple] optgroup { padding-block: 1em 0 }
