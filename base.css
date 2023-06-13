@@ -1,4 +1,4 @@
-/*! style-forge.base v2.0.1 | MIT License | github.com/sarmaged/style-forge.base */
+/*! style-forge.base v3.0.0 | MIT License | github.com/sarmaged/style-forge.base */
 
 :root {
   --sf-base-ff: Arial, Helvetica, sans-serif;
@@ -41,6 +41,10 @@
 ::backdrop {
   --sf-c-backdrop: 0 0% 10%;
   --sf-dark-c-backdrop: 0 0% 100%;
+}
+
+:root[data-theme] {
+  transition: background-color 0.2s ease-out;
 }
 
 :root[data-theme="auto"] {
@@ -93,7 +97,6 @@
 { box-sizing: inherit }
 
 * {
-  position: unset;
   display: grid;
   gap: var(--sf-gap);
 }
@@ -122,27 +125,28 @@ body,
 figure
 { margin: 0 }
 
-body {
-  min-height: 100vh;
-}
+html { height: 100% }
+
+body { min-height: 100% }
 
 a,
 abbr,
 address,
+audio,
 b,
 bdi,
 bdo,
 br,
 button,
+canvas,
 cite,
 code,
+data,
+dd,
 del,
 dfn,
+dt,
 em,
-i,
-img,
-ins,
-input,
 h1,
 h2,
 h3,
@@ -151,12 +155,22 @@ h5,
 h6,
 hr,
 html,
+i,
+iframe,
+img,
+input,
+ins,
 kbd,
 label,
 legend,
 mark,
+meter,
+noscript,
+ol,
 p,
+picture,
 pre,
+progress,
 q,
 rp,
 rt,
@@ -165,15 +179,20 @@ s,
 samp,
 select,
 small,
+source,
 span,
 strong,
 sub,
+summary,
 sup,
+svg,
 textarea,
 time,
 u,
-var
-{ display: unset }
+ul,
+var,
+video
+{ display: initial }
 
 hr {
   width: 100%;
@@ -225,37 +244,38 @@ img
 [hidden],
 [type="hidden"],
 datalist,
-head *,
+dialog:not([open]),
 head,
 link,
 meta,
 script,
 style,
-template,
-dialog:not([open])
+template
 { display: none }
 
-[p-a] { position: absolute }
+[initial] { display: initial }
 
-[p-f] { position: fixed }
+[inherit] { display: inherit }
 
-[p-r] { position: relative }
+[fixed] { position: fixed }
 
-[p-static] { position: static }
+[static] { position: static }
 
-[p-sticky] { position: sticky }
+[sticky] { position: sticky }
 
-[p-u] { position: unset }
+[relative] { position: relative }
 
-[top]:is([p-a], [p-f], [p-r], [p-sticky]) { top: 0 }
+[absolute] { position: absolute }
 
-[left]:is([p-a], [p-f], [p-r], [p-sticky]) { left: 0 }
+[top]:is([absolute], [fixed], [relative], [sticky]) { top: 0 }
 
-[right]:is([p-a], [p-f], [p-r], [p-sticky]) { right: 0 }
+[left]:is([absolute], [fixed], [relative], [sticky]) { left: 0 }
 
-[bottom]:is([p-a], [p-f], [p-r], [p-sticky]) { bottom: 0 }
+[right]:is([absolute], [fixed], [relative], [sticky]) { right: 0 }
 
-[full]:is([p-a],[p-f]) {
+[bottom]:is([absolute], [fixed], [relative], [sticky]) { bottom: 0 }
+
+[full]:is([absolute],[fixed]) {
   top: 0;
   left: 0;
   right: 0;
@@ -556,16 +576,12 @@ input[type="file"] {
   overflow: hidden;
 }
 
-select[multiple] { padding: 0 }
-
 fieldset {
   padding: 1em;
   border: 1px solid hsl(var(--sf-c-bd));
 }
 
 legend { padding: 0 0.5em }
-
-select[multiple] optgroup { padding-block: 1em 0 }
 
 table {
   display: table;
@@ -599,6 +615,6 @@ td:not([align]),
 th:not([align])
 { text-align: inherit }
 
-dialog::backdrop {
-  background: hsl(var(--sf-c-backdrop) / 20%);
-}
+dialog[open] { z-index: 1000 }
+
+dialog::backdrop { background: hsl(var(--sf-c-backdrop) / 20%) }
