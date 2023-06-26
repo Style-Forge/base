@@ -1,6 +1,8 @@
 @import "var.css";
 @import "tag.css";
+@import "display.css";
 @import "attr.css";
+@import "z.css";
 @import "text.css";
 @import "link.css";
 @import "form.css";

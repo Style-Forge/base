@@ -3,10 +3,9 @@
 *::after
 { box-sizing: inherit }
 
-* {
-  display: grid;
-  gap: var(--sf-gap);
-}
+* { gap: var(--sf-gap) }
+
+:focus-visible { outline: none }
 
 html {
   font: var(--sf-base-fz)/var(--sf-base-fw) var(--sf-base-ff);
@@ -32,71 +31,6 @@ figure
 
 html { height: 100% }
 body { min-height: 100% }
-
-a,
-abbr,
-address,
-audio,
-b,
-bdi,
-bdo,
-br,
-button,
-canvas,
-cite,
-code,
-data,
-dd,
-del,
-dfn,
-dt,
-em,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-hr,
-html,
-i,
-iframe,
-img,
-input,
-ins,
-kbd,
-label,
-legend,
-mark,
-meter,
-noscript,
-ol,
-p,
-picture,
-pre,
-progress,
-q,
-rp,
-rt,
-ruby,
-s,
-samp,
-select,
-small,
-source,
-span,
-strong,
-sub,
-summary,
-sup,
-svg,
-textarea,
-time,
-u,
-ul,
-var,
-video
-{ display: initial }
 
 hr {
   width: 100%;
@@ -142,15 +76,3 @@ video
 iframe,
 img
 { border: 0 }
-
-[hidden],
-[type="hidden"],
-datalist,
-dialog:not([open]),
-head,
-link,
-meta,
-script,
-style,
-template
-{ display: none }
