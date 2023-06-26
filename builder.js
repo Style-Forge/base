@@ -13,7 +13,7 @@ const header = '/*! ' + [title, license, link].join(' | ') + ' */'
 const plugins = [
   require('postcss-import'),
   require('autoprefixer'),
-  // require('postcss-minify'),
+  require('postcss-minify'),
 ]
 
 postcss(plugins)
