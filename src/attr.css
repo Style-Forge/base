@@ -19,7 +19,7 @@
 [ov-a] { overflow: auto }
 [ov-h] { overflow: hidden }
 
-[wv-100] { width: 100vw }
+[vw-100] { width: 100vw }
 [vh-100] { height: 100vh }
 
 [gap-0] { gap: 0 }
