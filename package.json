@@ -1,7 +1,8 @@
 {
   "name": "style-forge.base",
-  "version": "4.0.3",
+  "version": "5.0.0",
   "description": "Base CSS for style-forge",
+  "type": "module",
   "main": "base.css",
   "repository": "github:sarmaged/style-forge.base",
   "author": "Sarmaged <sarmaged@gmail.com>",
@@ -9,7 +10,6 @@
   "keywords": [
     "style-forge.base",
     "html",
-    "grid",
     "css"
   ],
   "scripts": {
