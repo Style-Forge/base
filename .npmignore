@@ -1,8 +1,8 @@
-test
-.vscode
-.idea
-*.iml
-*.lock
-.browserslistrc
-.editorconfig
-.gitignore
+
+!package.json
+!README.md
+!src/
+!dist/
+!*.css
+
+*

@@ -3,38 +3,41 @@
 *::after
 { box-sizing: inherit }
 
-* { gap: var(--sf-gap) }
-
-:focus-visible { outline: none }
+::backdrop { background: hsl(var(--sf-c-backdrop) / 20%) }
 
 html {
-  font: var(--sf-base-fz)/var(--sf-base-fw) var(--sf-base-ff);
-  line-height: 0.8;
+  display: flex;
+
+  font-family: var(--sf-base-ff);
+  font-size: var(--sf-base-fz);
+  font-weight: var(--sf-base-fw);
+
+  line-height: var(--sf-base-lh);
 
   color: hsl(var(--sf-c-txt));
   background: hsl(var(--sf-c-bg));
 
   min-width: 300px;
+  min-height: 100%;
 
   box-sizing: border-box;
 
   font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-size-adjust: 100%;
+  text-size-adjust: none;
+}
+
+html > body {
+  display: flex;
+  flex: 1;
 }
 
 body,
 figure
 { margin: 0 }
 
-html { height: 100% }
-body { min-height: 100% }
-
 hr {
   width: 100%;
-  margin-block: 1em;
+  margin: 1em 0;
 }
 
 pre {
@@ -46,20 +49,14 @@ pre {
 ol,
 ul
 {
-  gap: 0;
-  margin-block: 0;
-  margin-inline: 2em 0;
+  margin: 0 0 0 2em;
   padding: 0;
 }
-li { display: list-item }
 
 dt { font-weight: 700 }
-dd { margin-inline-start: 2em }
+dd { margin-left: 2em }
 
-blockquote {
-  margin-block: 0;
-  margin-inline: 2em;
-}
+blockquote { margin: 0 2em }
 
 summary {
   cursor: pointer;
@@ -76,3 +73,13 @@ video
 iframe,
 img
 { border: 0 }
+
+dialog[open] { z-index: 1000 }
+
+main,
+details
+{ display: block }
+
+template,
+[hidden]
+{ display: none }

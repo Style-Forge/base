@@ -1,12 +1,12 @@
 a {
   color: hsl(var(--sf-c-link));
   text-decoration: underline;
+  background: none;
 }
 
-a:active { color: hsl(var(--sf-c-link-active)) }
-
-a:hover,
-a:active
-{ text-decoration: none }
-
-a:not([href]) { cursor: pointer }
+a:not([href]) {
+  cursor: not-allowed;
+  text-decoration: none;
+  opacity: var(--sf-disabled);
+  -webkit-tap-highlight-color: transparent;
+}

@@ -11,11 +11,10 @@ h6
 
 address,
 blockquote,
-dt,
 dd,
+dt,
 li,
-p,
-pre
+p
 {
   font-size: inherit;
   line-height: 1.5;
@@ -26,39 +25,34 @@ sub,
 sup
 { font-size: var(--sf-txt-small) }
 
-sub { margin-block-end: -0.5ex }
-sup {
-  margin-block-start: -0.5ex;
-  align-self: start;
-}
-
 h1 {
   font-size: var(--sf-h1);
-  margin-block: 0.8em 0.4em;
+  margin: 0.8em 0 0.4em;
 }
 h2 {
   font-size: var(--sf-h2);
-  margin-block: 0.9em 0.45em;
+  margin: 0.9em 0 0.45em;
 }
 h3 {
   font-size: var(--sf-h3);
-  margin-block: 1em 0.5em;
+  margin: 1em 0 0.5em;
 }
 h4 {
   font-size: var(--sf-h4);
-  margin-block: 1.1em 0.55em;
+  margin: 1.1em 0 0.55em;
 }
 h5 {
   font-size: var(--sf-h5);
-  margin-block: 1.2em 0.6em;
+  margin: 1.2em 0 0.6em;
 }
 h6 {
   font-size: var(--sf-h6);
-  margin-block: 1.3em 0.65em;
+  margin: 1.3em 0 0.65em;
 }
 
 p { margin: 0 }
 
+pre,
 code,
 kbd,
 samp,
@@ -69,27 +63,7 @@ b,
 strong
 { font-weight: 700 }
 
-cite,
-dfn,
-em,
-i,
-var
-{ font-style: italic }
-
-ins,
-u
-{ text-decoration: underline }
-
-del,
-s
-{ text-decoration: line-through }
-
 mark {
   color: hsl(var(--sf-c-mark-txt));
   background: hsl(var(--sf-c-mark-bg));
 }
-abbr[title] { text-decoration: underline dotted }
-bdo { unicode-bidi: bidi-override }
-bdi { unicode-bidi: isolate }
-q::before { content: open-quote }
-q::after { content: close-quote }

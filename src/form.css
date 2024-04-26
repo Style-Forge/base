@@ -1,8 +1,9 @@
+::file-selector-button,
 button,
 input,
-select,
 optgroup,
 option,
+select,
 textarea
 {
   font-size: inherit;
@@ -10,40 +11,46 @@ textarea
   font-weight: 400;
   line-height: 1;
 
-  padding-block: 0.25em;
-  padding-inline: 0.5em;
+  vertical-align: top;
+  text-transform: none;
 }
 
 button,
+:where(input:not(
+  [type='checkbox'],
+  [type='color'],
+  [type='file'],
+  [type='hidden'],
+  [type='image'],
+  [type='radio'],
+  [type='range']
+)),
+optgroup,
+option,
 select,
-input[type="color"],
-input[type="radio"],
-input[type="checkbox"],
-input[type="image"],
-input[type="reset"],
-input[type="button"],
-input[type="submit"],
-input[type="file"],
-input[type="range"]
+textarea
+{ padding: 0.25em 0.5em }
+
+::file-selector-button,
+:where(button, select),
+:where(input):where(
+  [type='button'],
+  [type='checkbox'],
+  [type='color'],
+  [type='file'],
+  [type='image'],
+  [type='radio'],
+  [type='range'],
+  [type='reset'],
+  [type='submit']
+)
 { cursor: pointer }
 
-input:disabled,
-button:disabled,
-select:disabled,
-optgroup:disabled,
-option:disabled,
-textarea:read-only,
-textarea:disabled,
-input:read-only:not([type="submit"], [type="reset"], [type="button"], [type="file"], [type="range"], [type="color"], [type="image"], [type="checkbox"], [type="radio"])
-{ cursor: not-allowed }
-
-select,
-optgroup,
-option
-{ gap: 0 }
-
-input[type="file"] {
-  overflow: hidden;
+:disabled,
+:disabled::file-selector-button
+{
+  cursor: not-allowed;
+  -webkit-tap-highlight-color: transparent;
 }
 
 fieldset {
@@ -51,4 +58,12 @@ fieldset {
   border: 1px solid hsl(var(--sf-c-bd));
 }
 
-legend { padding: 0 0.5em }
+legend {
+  color: inherit;
+  padding: 0 0.5em;
+}
+
+progress { vertical-align: baseline }
+
+textarea { overflow: auto }
+

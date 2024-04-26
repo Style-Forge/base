@@ -1,5 +1,9 @@
-const fs = require('fs')
-const postcss = require('postcss')
+import fs from 'fs'
+import postcss from 'postcss'
+
+import pImport from 'postcss-import'
+import pAutoprefixer from 'autoprefixer'
+import pMinify from 'postcss-minify'
 
 const [from, to] = ['src/all.css', 'base.css']
 const css = fs.readFileSync(from, 'utf8')
@@ -10,11 +14,7 @@ const license = packageFile.license + ' License'
 const link = 'github.com/' + packageFile.repository.split(':')[1]
 const header = '/*! ' + [title, license, link].join(' | ') + ' */'
 
-const plugins = [
-  require('postcss-import'),
-  require('autoprefixer'),
-  require('postcss-minify'),
-]
+const plugins = [pImport, pAutoprefixer, pMinify]
 
 postcss(plugins)
   .process(css, { from })
