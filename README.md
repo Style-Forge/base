@@ -8,7 +8,7 @@
 
 ## Description
 
-style-forge.base provides the foundational CSS variables and base styles for the Style Forge framework. It includes essential typography, color schemes, and utility classes, ensuring a consistent and customizable design system for your web projects.
+`Style-Forge.Base` provides the foundational CSS variables and base styles for the Style Forge framework. It includes essential typography, color schemes, and utility classes, ensuring a consistent and customizable design system for your web projects.
 
 ## Installation
 
