@@ -1,6 +1,6 @@
 {
   "name": "style-forge.base",
-  "version": "5.0.2",
+  "version": "5.0.3",
   "description": "Base CSS for style-forge",
   "type": "module",
   "main": "base.css",
