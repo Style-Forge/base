@@ -1,5 +1,5 @@
 
-# Contributing to Style Forge Base
+# Contributing to style-forge.base
 
 Thank you for your interest in contributing to the Style Forge Base project! We welcome contributions from the community. Please follow these guidelines to ensure a smooth contribution process.
 

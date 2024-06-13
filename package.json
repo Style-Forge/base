@@ -1,7 +1,7 @@
 {
   "name": "style-forge.base",
   "version": "5.0.3",
-  "description": "Base CSS for style-forge",
+  "description": "style-forge.base provides the foundational CSS variables and base styles for the Style Forge framework. It includes essential typography, color schemes, and utility classes, ensuring a consistent and customizable design system for your web projects.",
   "type": "module",
   "main": "base.css",
   "repository": {
@@ -11,9 +11,22 @@
   "author": "Sarmaged <sarmaged@gmail.com>",
   "license": "MIT",
   "keywords": [
-    "style-forge.base",
-    "html",
-    "css"
+    "style-forge",
+    "base",
+    "CSS",
+    "variables",
+    "styles",
+    "design",
+    "web development",
+    "frontend",
+    "responsive",
+    "typography",
+    "colors",
+    "system-ui",
+    "HSL",
+    "lightweight",
+    "performance",
+    "consistent"
   ],
   "scripts": {
     "build": "node builder.js"

@@ -1,5 +1,5 @@
 
-# Style Forge Base
+# Style-Forge.Base
 
 ![npm](https://img.shields.io/npm/v/style-forge.base)
 ![npm](https://img.shields.io/npm/dm/style-forge.base)
@@ -8,7 +8,7 @@
 
 ## Description
 
-Style Forge Base is a base CSS package for Style Forge, providing foundational styles and variables for web development. It includes default font settings, sizes for various heading levels, and color definitions using HSL.
+style-forge.base provides the foundational CSS variables and base styles for the Style Forge framework. It includes essential typography, color schemes, and utility classes, ensuring a consistent and customizable design system for your web projects.
 
 ## Installation
 
