@@ -4,7 +4,10 @@
   "description": "Base CSS for style-forge",
   "type": "module",
   "main": "base.css",
-  "repository": "github:sarmaged/style-forge.base",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarmaged/style-forge.base.git"
+  },
   "author": "Sarmaged <sarmaged@gmail.com>",
   "license": "MIT",
   "keywords": [
@@ -13,13 +16,19 @@
     "css"
   ],
   "scripts": {
-    "build": "node builder.js",
-    "prepublishOnly": "node builder.js"
+    "build": "node builder.js"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.23",
     "postcss-import": "^15.1.0",
     "postcss-minify": "^1.1.0"
+  },
+  "bugs": {
+    "url": "https://github.com/sarmaged/style-forge.base/issues"
+  },
+  "homepage": "https://github.com/sarmaged/style-forge.base#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   }
 }
