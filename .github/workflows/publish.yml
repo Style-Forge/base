@@ -17,6 +17,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: yarn
 
       - name: Set up NPM auth
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
