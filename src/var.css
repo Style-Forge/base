@@ -22,7 +22,8 @@
 
   --sf-c-txt: 0 0% 10%;
   --sf-c-bg: 0 0% 100%;
-  --sf-c-bd: 0 0% 75%;
   --sf-c-shape-bg: 0 0% 90%;
   --sf-c-backdrop: 0 0% 10%;
+  --sf-table-c-bd: 0 0% 75%;
+  --sf-form-c-bd: 0 0% 10%;
 }

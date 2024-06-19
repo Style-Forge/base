@@ -13,7 +13,7 @@ td,
 th
 {
   padding: 0.5em 0.75em;
-  border: 1px solid hsl(var(--sf-c-bd));
+  border: 1px solid hsl(var(--sf-table-c-bd));
 }
 
 td:not([align]),

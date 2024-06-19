@@ -11,7 +11,6 @@ textarea
   font-weight: 400;
   line-height: 1;
 
-  vertical-align: top;
   text-transform: none;
 }
 
@@ -55,7 +54,7 @@ textarea
 
 fieldset {
   padding: 1em;
-  border: 1px solid hsl(var(--sf-c-bd));
+  border: 1px solid hsl(var(--sf-form-c-bd));
 }
 
 legend {
