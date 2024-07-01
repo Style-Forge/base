@@ -1,4 +1,4 @@
-name: Notify style-forge
+name: Notify
 
 on:
   pull_request:
@@ -6,13 +6,21 @@ on:
 
 jobs:
   notify:
-    if: github.event.pull_request.merged == true
+    if: github.event.pull_request.merged == true && contains(github.event.pull_request.labels.*.name, 'release')
     runs-on: ubuntu-latest
 
     steps:
       - name: Determine version update type
         id: determine_version
-        run: echo "update_type=patch" >> $GITHUB_ENV
+        run: |
+          COMMIT_MESSAGE=$(git log -1 --pretty=format:%B)
+          if [[ "$COMMIT_MESSAGE" == *"[major]"* ]]; then
+            echo "update_type=major" >> $GITHUB_ENV
+          elif [[ "$COMMIT_MESSAGE" == *"[minor]"* ]]; then
+            echo "update_type=minor" >> $GITHUB_ENV
+          else
+            echo "update_type=patch" >> $GITHUB_ENV
+          fi
 
       - name: Send notification to style-forge
         run: |

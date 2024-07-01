@@ -1,0 +1,80 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Configure Git
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+
+      - name: Extract version and previous tag
+        id: extract_info
+        run: |
+          TAG_NAME=${GITHUB_REF#refs/tags/}
+          VERSION=$TAG_NAME
+          PREVIOUS_TAG=$(git describe --tags $(git rev-list --tags --skip=1 --max-count=1))
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          echo "PREVIOUS_TAG=$PREVIOUS_TAG" >> $GITHUB_ENV
+
+      - name: Determine update type
+        id: determine_update_type
+        run: |
+          IFS='.' read -r -a NEW_VERSION_PARTS <<< "${VERSION#v}"
+          IFS='.' read -r -a OLD_VERSION_PARTS <<< "${PREVIOUS_TAG#v}"
+
+          if [ "${NEW_VERSION_PARTS[0]}" -ne "${OLD_VERSION_PARTS[0]}" ]; then
+            UPDATE_TYPE=major
+          elif [ "${NEW_VERSION_PARTS[1]}" -ne "${OLD_VERSION_PARTS[1]}" ]; then
+            UPDATE_TYPE=minor
+          else
+            UPDATE_TYPE=patch
+          fi
+          echo "UPDATE_TYPE=$UPDATE_TYPE" >> $GITHUB_ENV
+
+      - name: Create and push new branch
+        run: |
+          NEW_BRANCH=release-v${VERSION}
+          git checkout -b ${NEW_BRANCH}
+          git push origin ${NEW_BRANCH}
+          echo "NEW_BRANCH=$NEW_BRANCH" >> $GITHUB_ENV
+
+      - name: Update version in package.json
+        run: jq --arg new_version "$VERSION" '.version = $new_version' package.json > temp.json && mv temp.json package.json
+
+      - name: Build the package
+        run: yarn build
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Update version to ${{ env.VERSION }} [${{ env.UPDATE_TYPE }}] and upgrade dependencies"
+          branch: ${{ env.NEW_BRANCH }}
+          base: main
+          title: "Release ${{ env.VERSION }}"
+          body: "This PR updates the version to ${{ env.VERSION }} and upgrades dependencies."
+          labels: release
