@@ -54,7 +54,7 @@ textarea
 
 fieldset {
   padding: 1em;
-  border: 1px solid hsl(var(--sf-form-c-bd));
+  border: 1px solid hsl(var(--sf-fieldset-c-bd));
 }
 
 legend {
