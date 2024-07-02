@@ -1,6 +1,6 @@
 {
   "name": "style-forge.base",
-  "version": "5.0.7",
+  "version": ".5.0.8",
   "description": "Style-Forge.Base provides the foundational CSS variables and base styles for the Style Forge framework. It includes essential typography, color schemes, and utility classes, ensuring a consistent and customizable design system for your web projects",
   "type": "module",
   "main": "base.css",
