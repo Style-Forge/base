@@ -31,11 +31,13 @@ jobs:
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'
 
+      - name: Fetch all tags
+        run: git fetch --tags
+
       - name: Extract version and previous tag
         id: extract_info
         run: |
-          TAG_NAME=${GITHUB_REF#refs/tags/}
-          VERSION=$TAG_NAME
+          VERSION=${GITHUB_REF#refs/tags/v}
           PREVIOUS_TAG=$(git describe --tags $(git rev-list --tags --skip=1 --max-count=1))
           echo "VERSION=$VERSION" >> $GITHUB_ENV
           echo "PREVIOUS_TAG=$PREVIOUS_TAG" >> $GITHUB_ENV
@@ -43,12 +45,12 @@ jobs:
       - name: Determine update type
         id: determine_update_type
         run: |
-          IFS='.' read -r -a NEW_VERSION_PARTS <<< "${VERSION#v}"
+          IFS='.' read -r -a NEW_VERSION_PARTS <<< "${VERSION}"
           IFS='.' read -r -a OLD_VERSION_PARTS <<< "${PREVIOUS_TAG#v}"
 
-          if [ "${NEW_VERSION_PARTS[0]}" -ne "${OLD_VERSION_PARTS[0]}" ]; then
+          if [ "${NEW_VERSION_PARTS[0]}" != "${OLD_VERSION_PARTS[0]}" ]; then
             UPDATE_TYPE=major
-          elif [ "${NEW_VERSION_PARTS[1]}" -ne "${OLD_VERSION_PARTS[1]}" ]; then
+          elif [ "${NEW_VERSION_PARTS[1]}" != "${OLD_VERSION_PARTS[1]}" ]; then
             UPDATE_TYPE=minor
           else
             UPDATE_TYPE=patch
