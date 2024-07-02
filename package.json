@@ -32,9 +32,9 @@
     "build": "node builder.js"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.23",
-    "postcss-import": "^15.1.0",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.39",
+    "postcss-import": "^16.1.0",
     "postcss-minify": "^1.1.0"
   },
   "bugs": {
