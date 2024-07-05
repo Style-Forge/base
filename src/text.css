@@ -23,7 +23,7 @@ p
 small,
 sub,
 sup
-{ font-size: var(--sf-txt-small) }
+{ font-size: var(--sf-fz-small) }
 
 h1 {
   font-size: var(--sf-h1);
