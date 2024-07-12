@@ -8,11 +8,11 @@
 html {
   display: flex;
 
-  font-family: var(--sf-base-ff);
-  font-size: var(--sf-base-fz);
-  font-weight: var(--sf-base-fw);
+  font-family: var(--sf-ff);
+  font-size: var(--sf-fz);
+  font-weight: var(--sf-fw);
 
-  line-height: var(--sf-base-lh);
+  line-height: var(--sf-lh);
 
   color: hsl(var(--sf-c-txt));
   background: hsl(var(--sf-c-bg));
