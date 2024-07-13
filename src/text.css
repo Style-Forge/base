@@ -4,10 +4,14 @@ h3,
 h4,
 h5,
 h6
-{
-  font-weight: 700;
-  line-height: normal;
-}
+{ line-height: normal }
+
+h1 { font-weight: var(--sf-fw-h1) }
+h2 { font-weight: var(--sf-fw-h2) }
+h3 { font-weight: var(--sf-fw-h3) }
+h4 { font-weight: var(--sf-fw-h4) }
+h5 { font-weight: var(--sf-fw-h5) }
+h6 { font-weight: var(--sf-fw-h6) }
 
 address,
 blockquote,
@@ -23,7 +27,10 @@ p
 small,
 sub,
 sup
-{ font-size: var(--sf-fz-small) }
+{
+  font-size: var(--sf-fz-small);
+  font-weight: var(--sf-fw-small);
+}
 
 h1 {
   font-size: var(--sf-h1);
@@ -61,7 +68,7 @@ time
 
 b,
 strong
-{ font-weight: 700 }
+{ font-weight: var(--sf-fw-bold) }
 
 mark {
   color: hsl(var(--sf-c-mark-txt));
