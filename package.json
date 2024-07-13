@@ -1,6 +1,6 @@
 {
   "name": "style-forge.base",
-  "version": "5.3.0",
+  "version": "5.3.1",
   "description": "Style-Forge.Base: foundational CSS variables, base styles, typography, colors, utilities for consistent design.",
   "type": "module",
   "main": "base.css",
