@@ -21,7 +21,7 @@ li,
 p
 {
   font-size: inherit;
-  line-height: 1.5;
+  line-height: var(--sf-lh-txt);
 }
 
 small,
