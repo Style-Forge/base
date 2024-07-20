@@ -5,7 +5,7 @@
 ![license](https://img.shields.io/npm/l/style-forge.base)
 ![npm](https://img.shields.io/npm/dm/style-forge.base)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/b1937fcb74d44c3db8d5f1bfcbc38862)](https://app.codacy.com/gh/Style-Forge/base/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
-![build](https://github.com/Sarmaged/style-forge.base/actions/workflows/publish.yml/badge.svg)
+![build](https://github.com/style-forge/base/actions/workflows/publish.yml/badge.svg)
 
 `Style-Forge.Base` provides the foundational CSS variables and base styles for the Style Forge framework. It includes essential typography, color schemes, and utility classes, ensuring a consistent and customizable design system for your web projects.
 
