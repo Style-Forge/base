@@ -33,7 +33,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 <table>
   <tr>
-    <th>Repositories</th>
+    <th>Modules</th>
     <th>Version</th>
     <th>Description</th>
   </tr>
