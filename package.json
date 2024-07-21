@@ -40,7 +40,7 @@
   "bugs": {
     "url": "https://github.com/Style-Forge/base/issues"
   },
-  "homepage": "https://github.com/Style-Forge/base#readme",
+  "homepage": "https://style-forge.dev/base/",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   }
