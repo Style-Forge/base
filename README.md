@@ -11,23 +11,7 @@
 
 ## Description
 
-To check out docs, visit [style-forge.dev](https://style-forge.dev/base/)
-
-## Contributing
-
-We welcome contributions from the community! Please follow these steps to contribute:
-
-1. Fork the repository.
-2. Create a new branch: `git checkout -b feature/branch-name`.
-3. Make your changes and commit them: `git commit -am 'Add some feature'`.
-4. Push your changes to the forked repository: `git push origin feature/branch-name`.
-5. Create a pull request in the original repository.
-
-For more detailed information, please refer to [CONTRIBUTING.md](CONTRIBUTING.md).
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+To check out docs, visit [style-forge.github.io](https://style-forge.github.io/base/)
 
 ## Modules
 
@@ -74,10 +58,18 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
   </tr>
 </table>
 
-## Authors
+## Contributing
 
-- **Dmitrii Sagalov** - *Expert in interface development* - [Sarmaged](https://github.com/Sarmaged)
+We welcome contributions from the community! Please follow these steps to contribute:
 
-## Contact
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature/branch-name`.
+3. Make your changes and commit them: `git commit -am 'Add some feature'`.
+4. Push your changes to the forked repository: `git push origin feature/branch-name`.
+5. Create a pull request in the original repository.
 
-If you have any questions or suggestions, please open an issue in [Issues](https://github.com/Style-Forge/base/issues).
+For more detailed information, please refer to [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

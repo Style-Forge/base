@@ -51,6 +51,6 @@ If you find a bug or have a feature request, please open an issue on GitHub. Pro
 - Be respectful and considerate in your communications.
 - Follow the project's code of conduct.
 
-For more information, visit our [documentation site](https://style-forge.dev/base/).
+For more information, visit our [documentation site](https://style-forge.github.io/base/).
 
 Thank you for your contributions!
