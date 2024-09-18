@@ -9,9 +9,15 @@
 
 `Style-Forge.Base` provides the foundational CSS variables and base styles for the Style Forge framework. It includes essential typography, color schemes, and utility classes, ensuring a consistent and customizable design system for your web projects.
 
-## Description
+## Documentation
 
-To check out docs, visit [style-forge.github.io](https://style-forge.github.io/base/)
+To check out docs, visit [https://style-forge.github.io/](https://style-forge.github.io/).
+
+## Support the project ⭐
+
+If you feel awesome and want to support us in a small way, please consider starring and sharing the repo! This helps us getting known and grow the community. 🙏
+
+<img src="https://github.com/style-forge/hub/raw/main/public/github-star.gif" alt="style-forge-star" />
 
 ## Modules
 
