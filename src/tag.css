@@ -1,13 +1,14 @@
 *,
 *::before,
 *::after
-{ box-sizing: inherit }
+{
+  z-index: 0;
+  box-sizing: inherit;
+}
 
 ::backdrop { background: hsl(var(--sf-c-backdrop) / 20%) }
 
 html {
-  display: flex;
-
   font-family: var(--sf-ff);
   font-size: var(--sf-fz);
   font-weight: var(--sf-fw);
@@ -18,22 +19,20 @@ html {
   background: hsl(var(--sf-c-bg));
 
   min-width: 320px;
-  min-height: 100%;
+  height: 100%;
 
   box-sizing: border-box;
 
-  font-synthesis: none;
-  text-size-adjust: none;
+  font-stretch: normal;
+  text-size-adjust: 100%;
 }
 
-html > body {
-  display: flex;
-  flex: 1;
+body {
+  min-height: 100%;
+  margin: 0 auto;
 }
 
-body,
-figure
-{ margin: 0 }
+figure { margin: 0 }
 
 hr {
   width: 100%;
@@ -58,28 +57,57 @@ dd { margin-left: 2em }
 
 blockquote { margin: 0 2em }
 
+details[open] > summary:first-of-type {
+  list-style-type: disclosure-open;
+}
 summary {
   cursor: pointer;
   display: list-item;
+  counter-increment: list-item 0;
+  list-style: inside disclosure-closed;
 }
 
-img,
-video
-{
-  height: auto;
+video {
+  width: 100%;
+  height: 100%;
+}
+
+img {
   max-width: 100%;
+  max-height: 100%;
+
+  text-anchor: middle;
+  object-fit: contain;
+
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+
+  user-select: none;
 }
 
 iframe,
 img
 { border: 0 }
 
+/* /// */
+
+html.var {
+  font-family: Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-size: 16px;
+  font-weight: 400;
+
+  line-height: 0.8;
+
+  color: hsl(0, 0%, 10%);
+  background: hsl(0, 0%, 100%);
+}
+html.var pre { background: hsl(0, 0%, 90%) }
+html.var ::backdrop { background: hsla(0, 0%, 10%, 0.2) }
+
+/* HTML5 */
+
 dialog[open] { z-index: 1000 }
-
-main,
-details
-{ display: block }
-
-template,
-[hidden]
-{ display: none }
+article, aside, details, dialog[open], figure, footer, header, hgroup, main, nav, section { display: block }
+meter, progress { display: inline-block }
+audio, bdi, canvas, data, embed, mark, output, picture, svg, time, video, wbr { display: inline }
+[hidden], datalist, dialog, source, template, track { display: none !important }
