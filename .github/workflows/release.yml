@@ -28,8 +28,10 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
+      - name: Install and build dependencies
+        run: |
+          yarn install --frozen-lockfile
+          yarn build
 
       - name: Extract version from package.json
         id: extract_version
@@ -42,9 +44,6 @@ jobs:
         run: |
           git tag -a "${{ env.VERSION }}" -m "Release ${{ env.VERSION }}"
           git push origin "${{ env.VERSION }}"
-
-      - name: Build the package
-        run: yarn build
 
       - name: Set up NPM auth
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
