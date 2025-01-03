@@ -1,34 +1,19 @@
 name: Notify
 
 on:
-  pull_request:
-    types: [closed]
+  push:
+    branches:
+      - main
 
 jobs:
   notify:
-    if: github.event.pull_request.merged == true && contains(github.event.pull_request.labels.*.name, 'release')
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Determine version update type
-        id: determine_version
-        run: |
-          COMMIT_MESSAGE=$(git log -1 --pretty=format:%B)
-          if [[ "$COMMIT_MESSAGE" == *"[major]"* ]]; then
-            echo "update_type=major" >> $GITHUB_ENV
-          elif [[ "$COMMIT_MESSAGE" == *"[minor]"* ]]; then
-            echo "update_type=minor" >> $GITHUB_ENV
-          else
-            echo "update_type=patch" >> $GITHUB_ENV
-          fi
-
-      - name: Send notification to style-forge
+      - name: Send notification
         run: |
           curl -X POST \
             -H "Accept: application/vnd.github.v3+json" \
             -H "Authorization: token ${{ secrets.NOTIFY_GITHUB_TOKEN }}" \
             https://api.github.com/repos/Style-Forge/hub/dispatches \
-            -d '{"event_type":"update-style-forge", "client_payload": {"update_type": "${{ env.update_type }}", "package_name": "style-forge.base"}}'
+            -d '{"event_type":"update-style-forge", "client_payload": {"package_name": "style-forge.base"}}'

@@ -1,4 +1,3 @@
-::file-selector-button,
 button,
 input,
 optgroup,
@@ -12,57 +11,97 @@ textarea
   line-height: 1;
 
   text-transform: none;
+  vertical-align: top;
 }
 
-button,
-:where(input:not(
-  [type='checkbox'],
-  [type='color'],
-  [type='file'],
-  [type='hidden'],
-  [type='image'],
-  [type='radio'],
-  [type='range']
-)),
-optgroup,
-option,
 select,
+button,
+input,
 textarea
-{ padding: 0.25em 0.5em }
+{
+  padding: 0 0.75em;
+  min-height: 32px;
+}
 
-::file-selector-button,
-:where(button, select),
-:where(input):where(
-  [type='button'],
-  [type='checkbox'],
-  [type='color'],
-  [type='file'],
-  [type='image'],
-  [type='radio'],
-  [type='range'],
-  [type='reset'],
-  [type='submit']
-)
+select[multiple] option,
+select[multiple] optgroup
+{
+  margin: 0 -0.75em;
+  padding: 0.4em 0.75em;
+}
+select[multiple] optgroup option { margin: 0 }
+
+input[type='checkbox'],
+input[type='color'],
+input[type='file'],
+input[type='hidden'],
+input[type='image'],
+input[type='radio'],
+input[type='range']
+{
+  margin: 0;
+  padding: 0;
+  min-height: 32px;
+}
+
+input[type='checkbox'],
+input[type='radio'],
+textarea
+{ min-height: auto }
+
+
+button,
+select,
+input[type='button'],
+input[type='reset'],
+input[type='submit'],
+input[type='checkbox'],
+input[type='color'],
+input[type='file'],
+input[type='image'],
+input[type='radio'],
+input[type='range']
 { cursor: pointer }
 
-:disabled,
-:disabled::file-selector-button
-{
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'],
+input[type='checkbox'],
+input[type='radio']
+{ vertical-align: baseline }
+
+input[type='checkbox'] { margin: 0 3px 0 0.5em }
+input[type='radio'] { margin: 0 3px 0 0.5em }
+
+fieldset { padding: 1em; border: 0 }
+legend { color: inherit; padding: 0 0.5em }
+textarea { overflow: auto }
+
+::file-selector-button {
+  cursor: pointer;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 400;
+  line-height: 1;
+
+  padding: 0 0.75em;
+  min-height: 32px;
+
+  text-transform: none;
+  vertical-align: baseline;
+}
+
+::file-selector-button:disabled {
   cursor: not-allowed;
   -webkit-tap-highlight-color: transparent;
 }
 
-fieldset {
-  padding: 1em;
-  border: 1px solid hsl(var(--sf-fieldset-c-bd));
+:disabled,
+input:disabled,
+button:disabled,
+select:disabled
+{
+  cursor: not-allowed;
+  -webkit-tap-highlight-color: transparent;
 }
-
-legend {
-  color: inherit;
-  padding: 0 0.5em;
-}
-
-progress { vertical-align: baseline }
-
-textarea { overflow: auto }
-

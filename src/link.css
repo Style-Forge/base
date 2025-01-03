@@ -10,3 +10,8 @@ a:not([href]) {
   opacity: var(--sf-disabled);
   -webkit-tap-highlight-color: transparent;
 }
+
+/* /// */
+
+html.var a { color: hsl(225, 73%, 57%) }
+html.var a:not([href]) { opacity: 0.4 }

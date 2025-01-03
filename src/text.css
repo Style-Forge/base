@@ -3,25 +3,20 @@ h2,
 h3,
 h4,
 h5,
-h6
-{ line-height: normal }
-
-h1 { font-weight: var(--sf-fw-h1) }
-h2 { font-weight: var(--sf-fw-h2) }
-h3 { font-weight: var(--sf-fw-h3) }
-h4 { font-weight: var(--sf-fw-h4) }
-h5 { font-weight: var(--sf-fw-h5) }
-h6 { font-weight: var(--sf-fw-h6) }
-
+h6,
+pre,
+ruby,
 address,
 blockquote,
 dd,
 dt,
 li,
-p
+p,
+figure,
+details
 {
   font-size: inherit;
-  line-height: var(--sf-lh-txt);
+  line-height: var(--sf-lh-normal);
 }
 
 small,
@@ -33,27 +28,33 @@ sup
 }
 
 h1 {
-  font-size: var(--sf-h1);
+  font-size: var(--sf-fz-h1);
+  font-weight: var(--sf-fw-h1);
   margin: 0.8em 0 0.4em;
 }
 h2 {
-  font-size: var(--sf-h2);
+  font-size: var(--sf-fz-h2);
+  font-weight: var(--sf-fw-h2);
   margin: 0.9em 0 0.45em;
 }
 h3 {
-  font-size: var(--sf-h3);
+  font-size: var(--sf-fz-h3);
+  font-weight: var(--sf-fw-h3);
   margin: 1em 0 0.5em;
 }
 h4 {
-  font-size: var(--sf-h4);
+  font-size: var(--sf-fz-h4);
+  font-weight: var(--sf-fw-h4);
   margin: 1.1em 0 0.55em;
 }
 h5 {
-  font-size: var(--sf-h5);
+  font-size: var(--sf-fz-h5);
+  font-weight: var(--sf-fw-h5);
   margin: 1.2em 0 0.6em;
 }
 h6 {
-  font-size: var(--sf-h6);
+  font-size: var(--sf-fz-h6);
+  font-weight: var(--sf-fw-h6);
   margin: 1.3em 0 0.65em;
 }
 
@@ -70,7 +71,38 @@ b,
 strong
 { font-weight: var(--sf-fw-bold) }
 
-mark {
-  color: hsl(var(--sf-c-mark-txt));
-  background: hsl(var(--sf-c-mark-bg));
-}
+/* /// */
+
+html.var h1,
+html.var h2,
+html.var h3,
+html.var h4,
+html.var h5,
+html.var h6,
+html.var pre,
+html.var ruby,
+html.var address,
+html.var blockquote,
+html.var dd,
+html.var dt,
+html.var li,
+html.var p,
+html.var figure,
+html.var details
+{ line-height: 1.1875 }
+
+html.var small,
+html.var sub,
+html.var sup
+{ font-size: 12px; font-weight: 400 }
+
+html.var h1 { font-size: 48px; font-weight: 700 }
+html.var h2 { font-size: 40px; font-weight: 700 }
+html.var h3 { font-size: 32px; font-weight: 700 }
+html.var h4 { font-size: 24px; font-weight: 600 }
+html.var h5 { font-size: 20px; font-weight: 600 }
+html.var h6 { font-size: 16px; font-weight: 600 }
+
+html.var b,
+html.var strong
+{ font-weight: 600 }

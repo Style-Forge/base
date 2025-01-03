@@ -1,25 +1,27 @@
 table {
   display: table;
   border-collapse: collapse;
+
+  font-size: inherit;
+  line-height: var(--sf-lh-normal);
+
+  border-width: 0 1px 1px 0;
+
   border-spacing: 0;
 }
 
-tbody,
-tfoot,
-thead
-{ background: none }
+table, td, th { border: 1px solid hsl(var(--sf-table-c-bd)) }
+tbody, tfoot, thead { background: none }
+td, th { padding: 0.5em 0.75em }
 
-td,
-th
-{
-  padding: 0.5em 0.75em;
-  border: 1px solid hsl(var(--sf-table-c-bd));
-}
+td:not([align]), th:not([align]) { text-align: start }
+td:not([valign]), th:not([valign]) { vertical-align: top }
 
-td:not([align]),
-th:not([align])
-{ text-align: start }
+/* /// */
 
-td:not([valign]),
-th:not([valign])
-{ vertical-align: top }
+html.var table,
+html.var td,
+html.var th
+{ border: 1px solid hsl(0, 0%, 75%) }
+
+html.var table { line-height: 1.1875 }
