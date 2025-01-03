@@ -1,0 +1,69 @@
+name: Release
+
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: yarn
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Generate version from date
+        id: generate_version
+        run: |
+          VERSION="v$(date +'%Y.%m.%d' | sed 's/0//g')"
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          echo "Generated version: $VERSION"
+
+      - name: Update version in package.json
+        run: |
+          jq --arg new_version "${{ env.VERSION }}" '.version = $new_version' package.json > temp.json && mv temp.json package.json
+          echo "Updated package.json to version: ${{ env.VERSION }}"
+
+      - name: Commit updated package.json
+        run: |
+          git add package.json
+          git commit -m "chore: update version to ${{ env.VERSION }}"
+          git push origin main
+
+      - name: Create Git tag
+        run: |
+          git tag -a "${{ env.VERSION }}" -m "Release ${{ env.VERSION }}"
+          git push origin "${{ env.VERSION }}"
+
+      - name: Build the package
+        run: yarn build
+
+      - name: Notify release
+        run: echo "Release ${{ env.VERSION }} has been successfully created."
+
+      - name: Set up NPM auth
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+
+      - name: Publish to npm
+        run: yarn publish --non-interactive
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
