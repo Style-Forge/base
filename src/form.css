@@ -23,14 +23,6 @@ textarea
   min-height: 32px;
 }
 
-select[multiple] option,
-select[multiple] optgroup
-{
-  margin: 0 -0.75em;
-  padding: 0.4em 0.75em;
-}
-select[multiple] optgroup option { margin: 0 }
-
 input[type='checkbox'],
 input[type='color'],
 input[type='file'],
