@@ -61,6 +61,11 @@ If you feel awesome and want to support us in a small way, please consider starr
     <td><img src="https://img.shields.io/npm/v/style-forge.colors" alt="npm"></td>
     <td>Color palettes and styles for the project.</td>
   </tr>
+  <tr>
+    <td><a href="https://github.com/Style-Forge/media">media</a></td>
+    <td><img src="https://img.shields.io/npm/v/style-forge.media" alt="npm"></td>
+    <td>Comprehensive CSS media query helpers for responsive web design.</td>
+  </tr>
 </table>
 
 ## Contributing
