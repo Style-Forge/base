@@ -94,7 +94,7 @@ html.var details
 html.var small,
 html.var sub,
 html.var sup
-{ font-size: 12px; font-weight: 400 }
+{ font-size: 12px; font-weight: 300 }
 
 html.var h1 { font-size: 48px; font-weight: 700 }
 html.var h2 { font-size: 40px; font-weight: 700 }

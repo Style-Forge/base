@@ -10,7 +10,7 @@ table {
   border-spacing: 0;
 }
 
-table, td, th { border: 1px solid hsl(var(--sf-table-c-bd)) }
+table, td, th { border: 1px solid hsl(var(--sf-c-table-bd)) }
 tbody, tfoot, thead { background: none }
 td, th { padding: 0.5em 0.75em }
 
