@@ -9,11 +9,19 @@
 ::backdrop { background: hsl(var(--sf-c-backdrop) / 20%) }
 
 html {
-  font-family: var(--sf-ff);
-  font-size: var(--sf-fz);
-  font-weight: var(--sf-fw);
+  font-family: var(--sf-ff, sans-serif);
+  font-size: var(--sf-fz, 1rem);
+  font-weight: var(--sf-fw, 400);
+  font-synthesis: style;
+  font-optical-sizing: auto;
+  font-stretch: normal;
 
-  line-height: var(--sf-lh);
+  text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  line-height: var(--sf-lh, 0.8);
 
   color: hsl(var(--sf-c-txt));
   background: hsl(var(--sf-c-bg));
@@ -22,9 +30,6 @@ html {
   height: 100%;
 
   box-sizing: border-box;
-
-  font-stretch: normal;
-  text-size-adjust: 100%;
 }
 
 body {
@@ -92,7 +97,7 @@ img
 /* /// */
 
 html.var {
-  font-family: Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-family: 'Inter', ui-sans-serif, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   font-size: 16px;
   font-weight: 400;
 
