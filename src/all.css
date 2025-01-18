@@ -1,6 +1,6 @@
-@import 'var.css';
-@import 'tag.css';
-@import 'text.css';
-@import 'link.css';
-@import 'form.css';
-@import 'table.css';
+@import './var.css';
+@import './tag.css';
+@import './text.css';
+@import './link.css';
+@import './form.css';
+@import './table.css';
