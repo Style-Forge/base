@@ -115,4 +115,4 @@ dialog[open] { z-index: 1000 }
 article, aside, details, dialog[open], figure, footer, header, hgroup, main, nav, section { display: block }
 meter, progress { display: inline-block }
 audio, bdi, canvas, data, embed, mark, output, picture, svg, time, video, wbr { display: inline }
-[hidden], datalist, dialog, source, template, track { display: none !important }
+[hidden], datalist, dialog:not([open]), source, template, track { display: none !important }
