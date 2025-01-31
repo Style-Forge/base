@@ -49,7 +49,7 @@ If you feel awesome and want to support us in a small way, please consider starr
     <td>Utility functions and helpers for the project.</td>
   </tr>
   <tr>
-    <td>└ media</td>
+    <td>└&nbsp;media</td>
     <td><a href="https://github.com/Style-Forge/media" target="_blank">GitHub</a></td>
     <td><a href="https://npmjs.com/package/style-forge.media" target="_blank">NPM</a></td>
     <td><img src="https://img.shields.io/npm/v/style-forge.media" alt="npm"></td>
